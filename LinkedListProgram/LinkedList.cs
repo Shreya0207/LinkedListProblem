@@ -4,14 +4,14 @@ using System.Text;
 
 namespace LinkedListProgram
 {
-    class LinkedList
+    public class LinkedList
     {
-        internal Node head;
+        public Node head;
         public LinkedList()
         {
             this.head = null;
         }
-        internal void Add(int item)
+        public void Add(int item)
         {
             Node node = new Node(item);
             if (head == null)
@@ -24,7 +24,7 @@ namespace LinkedListProgram
                 head = node;
             }
         }
-        internal void Append(int item)
+        public void Append(int item)
         {
             Node node = new Node(item);
             if (head == null)
@@ -39,7 +39,7 @@ namespace LinkedListProgram
                 temp.next = node;
             }
         }
-        internal void Insert(int position, int item)
+        public void Insert(int position, int item)
         {
             Node node = new Node(item);
             if (position < 1)
@@ -68,7 +68,7 @@ namespace LinkedListProgram
                 }
             }
         }
-        internal Node Pop()
+        public Node Pop()
         {
             if (head == null)
             {
@@ -82,7 +82,8 @@ namespace LinkedListProgram
                 return popped;
             }
         }
-        internal Node RemoveLastNode()
+        public Node RemoveLastNode()
+
         {
             if (head == null)
             {
@@ -101,7 +102,23 @@ namespace LinkedListProgram
                 return removedNode;
             }
         }
-        internal void Display()
+        public bool Search(int item)
+        {
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == item)
+                        return true;
+                    temp = temp.next;
+                }
+                return false;
+            }
+        }
+        public void Display()
         {
             if (head == null)
                 System.Console.WriteLine("List is Empty");
@@ -117,7 +134,3 @@ namespace LinkedListProgram
         }
     }
 }
-
-
-
-     

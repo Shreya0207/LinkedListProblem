@@ -13,9 +13,7 @@ namespace LinkedListProgram
             list.Append(70);
             list.Append(100);
             list.Insert(4, 12);
-            Node p = list.Pop();
-            System.Console.WriteLine(p.data);
-            list.RemoveLastNode();
+            System.Console.WriteLine(list.Search(10));
             list.Display();
             
         }
