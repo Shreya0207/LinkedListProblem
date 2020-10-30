@@ -82,7 +82,7 @@ namespace LinkedListProgram
                 return popped;
             }
         }
-        public Node RemoveLastNode()
+        public Node RemoveLastNode(int remove)
 
         {
             if (head == null)
@@ -117,6 +117,26 @@ namespace LinkedListProgram
                 }
                 return false;
             }
+        }
+        public int Size()
+        {
+            int size = 0;
+            Node n = head;
+            if(head == null)
+            {
+                Console.WriteLine($"Linked List is Empty, Size is {size}");
+            }
+            else
+            {
+                size = 1;
+                while(n.next != null)
+                {
+                    n = n.next;
+                    size++;
+                }
+                Console.WriteLine($"Linked List Size is {size}");
+            }
+            return size;
         }
         public void Display()
         {

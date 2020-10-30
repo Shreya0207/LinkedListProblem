@@ -25,5 +25,16 @@ namespace LinkedListTest
             list.Insert(3, 40);
             Assert.IsTrue(list.Search(40));
         }
+        [TestMethod]
+        public void TestSize()
+        {
+            LinkedList list = new LinkedList();
+            list.Append(56);
+            list.Append(30);
+            list.Append(40);
+            list.Append(70);
+            list.RemoveLastNode(40);
+            Assert.AreEqual(3, list.Size());
+        }
     }
 }
