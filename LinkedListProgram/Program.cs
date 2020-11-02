@@ -7,15 +7,15 @@ namespace LinkedListProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Progrm");
-            LinkedList list = new LinkedList();
-            list.Append(56);
-            list.Append(30);
-            list.Append(70);
-            list.Append(100);
-            list.Insert(4, 12);
-            System.Console.WriteLine(list.Search(10));
+            SortedLinkedList list = new SortedLinkedList();
+            list.Add(32);
+            list.Add(12);
+            list.Add(434);
+            list.Add(0);
             list.Display();
-            
+            System.Console.WriteLine(list.Size());
         }
     }
 }
+
+   

@@ -33,8 +33,10 @@ namespace LinkedListTest
             list.Append(30);
             list.Append(40);
             list.Append(70);
-            list.RemoveLastNode(40);
+            list.Delete(40);
             Assert.AreEqual(3, list.Size());
         }
     }
 }
+
+
